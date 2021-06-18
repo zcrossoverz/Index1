@@ -3,25 +3,118 @@
     padding: 0;
     box-sizing: border-box;
 }
-body {
+/* body {
     background: #000 url('../[IMG]/2.jpg') no-repeat center center fixed;
     height: 100%;
     background-size: cover;
+} */
+
+section {
+  opacity: 0;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #000 url('../[IMG]/2.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
-  body {
-    overflow: hidden;
-  }
+section .row {
+    position: relative;
+    width: 100%;
+    top: -150%;
+    display: flex;
+    padding: 5px;
+    font-size: 65px;
+    white-space: nowrap;
+    transform: rotate(-30deg)
+}
 
-  #container {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    background: red;
-    width: 65%;
-    transform: translate(-50%,-10%);
-    height: 80%;
+span {
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 400;
+    transition: 1s;
+}
+span:hover {
+    color: #0f0;
+    text-shadow: 0 0 160px #0f0;
+    transition: 0s;
+}
+
+/* section .row div {
+  animation: animate 80s linear infinite;
+  animation-delay: -30s;
+} */
+
+/* @keyframes animate {
+  0%{
+    transform: rotate(-60deg);
   }
+  50%{
+    transform: rotate(-90deg);
+  }
+  100%{
+    transform: rotate(-30deg);
+  }
+} */
+
+section .row div {
+    animation: animate1 80s linear infinite;
+    animation-delay: -80s;
+}
+
+section .row div:nth-child(2) {
+    animation: animate2 80s linear infinite;
+    animation-delay: -40s;
+}
+
+@keyframes animate1 {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes animate2 {
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-200%);
+    }
+}
+
+section .row:nth-child(even) div {
+    animation: animate3 80s linear infinite;
+    animation-delay: -80s;
+}
+
+section .row:nth-child(even) div:nth-child(2) {
+    animation: animate4 80s linear infinite;
+    animation-delay: -40s;
+}
+
+@keyframes animate3 {
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+
+@keyframes animate4 {
+    0%{
+        transform: translateX(-200%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
   .holder {
     width: 500px;
     height: 250px;
