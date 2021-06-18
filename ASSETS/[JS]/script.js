@@ -5,6 +5,44 @@ setTimeout(()=>{
     document.querySelector('#message').style = 'opacity: 1;';
     document.querySelector('body').style = 'background: #609FA9;';
 }, 10100);
+let st = 0;
+    let change_title = ()=>{
+        st++;
+        switch(st){
+            case 1:
+                document.title = 'C*******R';
+                break;
+            case 2:
+                document.title = '*r*****e*';
+                break;
+            case 3:
+                document.title = '**o***v**';
+                break;
+            case 4:
+                document.title = '***s*o***';
+                break;
+            case 5:
+                document.title = '****s****';
+                break;
+            case 6:
+                document.title = '***s*o***';
+                break;
+            case 7:
+                document.title = '**o***v**';
+                break;
+            case 8:
+                document.title = '*r*****e*';
+                break;
+            case 9:
+                document.title = 'C*******R';
+                st = 1;
+                break;
+            default:
+                break;
+        }
+        setTimeout(change_title, 270);
+    }
+    change_title();
 const sn = document.getElementById('sn');
 let w = sn.width = window.innerWidth;
 let h = sn.height = window.innerHeight;
