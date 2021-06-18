@@ -4,6 +4,23 @@
     box-sizing: border-box;
 }
 
+html {
+  animation: n 1s linear alternate;
+  animation-delay: 10s;
+}
+
+@keyframes n {
+  50%{
+    background: #000;
+    color: #000;
+  }
+  90%{
+    background: #000;
+    color: #000;
+  }
+
+}
+
 body {
   user-select: none;
   color: #fff;
@@ -20,6 +37,8 @@ body {
   transform: translate(-50%,0%);
   font-size: 35px;
   color: red;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
   opacity: 0;
 }
 

@@ -3,6 +3,7 @@ setTimeout(()=>{
     document.querySelector('section').style = 'opacity: 0.9;';
     document.querySelector('.container').style = 'display:flex;';
     document.querySelector('#message').style = 'opacity: 1;';
+    document.querySelector('body').style = 'background: #609FA9;';
 }, 10100);
 const sn = document.getElementById('sn');
 let w = sn.width = window.innerWidth;
